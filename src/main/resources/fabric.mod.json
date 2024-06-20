@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "formattednames",
+	"version": "${version}",
+	"name": "Formatted names",
+	"description": "Adds PlaceholderAPI's Simplified Text Format support to Anvils!",
+	"authors": [
+		"Vesek"
+	],
+	"contact": {
+		"homepage": "https://ikt.vesek.eu/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod",
+		"formatdocs": "https://placeholders.pb4.eu/user/text-format"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/formattednames/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"eu.vesek.formattednames.FormattedNames"
+		]
+	},
+	"mixins": [
+		"formattednames.mixins.json",
+		{
+			"config": "formattednames.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
